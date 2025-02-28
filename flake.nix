@@ -28,7 +28,7 @@
   }@inputs:
   {
     nixosConfigurations.rubble = nixpkgs.lib.nixosSystem {
-      modules = [ ./host ];
+      modules = [ ./system ];
       specialArgs = inputs;
     };
   };
