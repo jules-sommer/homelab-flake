@@ -1,4 +1,4 @@
-{ config, ... }:
+{ ... }:
 {
   environment.persistence."/persist" = {
     hideMounts = true;
@@ -8,7 +8,6 @@
         "Documents"
         "Pictures"
         "Videos"
-        "Games"
         "VMs"
 
         ".snapshots"

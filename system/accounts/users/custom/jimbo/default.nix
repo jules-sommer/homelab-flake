@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, jimhome, ... }:
 {
   users.users.jimbo = {
     hashedPassword = config.secrets.jimboAccPass;

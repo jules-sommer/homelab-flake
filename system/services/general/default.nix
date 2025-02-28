@@ -6,7 +6,6 @@
     ./libvirtd
     ./snowflake
     ./ssh
-    ./tlp
     ./userborn
   ];
 }

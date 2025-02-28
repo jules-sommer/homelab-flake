@@ -3,7 +3,6 @@
   imports = [
     ./btop
     ./eza
-    ./fastfetch
     ./git
     ./headless
     ./neovim
