@@ -23,8 +23,5 @@
     dnsovertls = "true";
   };
 
-  environment = {
-    systemPackages = with pkgs; [ impala ];
-    persistence."/persist".directories = [ "/var/lib/iwd/" ];
-  };
+  environment.systemPackages = with pkgs; [ impala ];
 }

@@ -4,7 +4,7 @@
     hideMounts = true;
     directories = [
       "/etc/nixos"
-      "/etc/secureboot"
+      "/etc/ssh/"
       "/var"
     ];
     files = [

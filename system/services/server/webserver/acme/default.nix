@@ -1,10 +1,7 @@
 { config, lib, ... }:
 {
-  config = lib.mkIf config.services.nginx.enable {
-    security.acme = { 
-      acceptTerms = true;
-      defaults.email = "contact@nixfox.ca";
-    };
-    environment.persistence."/persist".directories = [ "/var/lib/acme" ];
+  security.acme = lib.mkIf config.services.nginx.enable { 
+    acceptTerms = true;
+    defaults.email = "contact@example.com";
   };
 }

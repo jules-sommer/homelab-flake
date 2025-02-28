@@ -17,23 +17,10 @@
       };
     };
 
-    programs.virt-manager.enable = true;
-
-    environment.persistence."/persist".directories = [
-      "/var/lib/libvirt/dnsmasq"
-      "/var/lib/libvirt/nwfilter"
-      "/var/lib/libvirt/qemu"
-      "/var/lib/libvirt/secrets"
-      "/var/lib/libvirt/storage"
-      "/var/lib/libvirt/swtpm"
-    ];
-
     # Needed to make NAT work
     networking.firewall.trustedInterfaces = [
       "virbr0"
       "virbr1"
     ];
-
-    systemd.tmpfiles.rules = [ "f /dev/shm/looking-glass 0660 - libvirtd -" ];
   };
 }
