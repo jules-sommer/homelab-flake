@@ -9,8 +9,5 @@
       openPeerPorts = true;
       settings.rpc-authentication-required = true;
     };
-    environment.persistence."/persist".directories = [
-      "/var/lib/transmission"
-    ];
   };
 }

@@ -1,7 +1,6 @@
 { ... }:
 {
   imports = [
-    ./nixfox
-    ./jimbosfiles
+    ./example
   ];
 }

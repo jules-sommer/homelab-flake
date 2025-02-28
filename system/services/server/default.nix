@@ -5,7 +5,7 @@
     ./fileserver
     ./forgejo
     ./mysql
-    ./socialserver
+    ./owncast
     ./transmission
     ./vaultwarden
     ./webserver

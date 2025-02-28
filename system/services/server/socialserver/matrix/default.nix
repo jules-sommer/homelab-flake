@@ -1,8 +1,0 @@
-{ ... }:
-{
-  imports = [
-    ./coturn
-    ./element
-    ./synapse
-  ];
-}

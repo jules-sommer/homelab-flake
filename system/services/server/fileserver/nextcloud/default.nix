@@ -1,9 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-  imports = [
-    ./collabora
-    ./nginx
-  ];
+  imports = [ ./nginx ];
 
   config = lib.mkIf config.system.fileserver.enable {
     services.nextcloud = {
@@ -29,6 +26,5 @@
         mail_smtpport = 587;
       };
     };
-    environment.persistence."/persist".directories = [ "/var/lib/nextcloud" ];
   };
 }

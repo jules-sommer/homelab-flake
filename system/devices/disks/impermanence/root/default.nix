@@ -5,7 +5,7 @@
     directories = [
       "/etc/nixos"
       "/etc/secureboot"
-      "/var/lib/nixos"
+      "/var"
     ];
     files = [
       "/etc/machine-id"

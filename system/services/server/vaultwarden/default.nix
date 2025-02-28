@@ -23,7 +23,5 @@
         SMTP_TIMEOUT = 15;
       };
     };
-
-    environment.persistence."/persist".directories = [ "/var/lib/bitwarden_rs" ];
   };
 }

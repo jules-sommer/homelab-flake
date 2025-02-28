@@ -2,11 +2,8 @@
 {
   imports = [
     ./extlinux
-    ./services
+    ./root-reset
   ];
 
-  boot.kernel.sysctl = {
-    "vm.max_map_count" = 2147483642;
-    "kernel.sysrq" = 1;
-  };
+  boot.initrd.systemd.enable = true;
 }

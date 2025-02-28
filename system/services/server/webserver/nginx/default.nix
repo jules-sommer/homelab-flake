@@ -1,9 +1,6 @@
 { config, lib, ... }:
 {
-  imports = [
-    ./rtmp
-    ./virtualhosts
-  ];
+  imports = [ ./virtualhosts ];
 
   config = lib.mkIf config.system.server.enable {
     services.nginx = {
@@ -13,8 +10,6 @@
       recommendedGzipSettings = true;
       recommendedProxySettings = true;
     };
-
-    environment.persistence."/persist".directories = [ "/var/www" ];
 
     networking.firewall.allowedTCPPorts = [
       80

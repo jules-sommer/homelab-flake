@@ -32,8 +32,6 @@
 
     networking.firewall.allowedTCPPorts = [ 2299 ];
 
-    services.cloudflare-dyndns.domains = [ "git.nixfox.ca" ];
-
-    environment.persistence."/persist".directories = [ "/var/lib/forgejo" ];
+    services.cloudflare-dyndns.domains = [ "git.example.com" ];
   };
 }
