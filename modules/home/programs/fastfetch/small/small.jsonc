@@ -1,0 +1,34 @@
+{
+  "logo": {
+    "type": "small"
+  },
+  "modules": [
+    {
+      "type": "os",
+      "format": "{3} {12}",
+      "key": "󰍛 "
+    },
+    {
+      "type": "host",
+      "key": "󰌢 "
+    },
+    {
+      "type": "kernel",
+      "format": "{1} {2}",
+      "key": " "
+    },
+    {
+      "type": "uptime",
+      "key": "󰅐 "
+    },
+    {
+      "type": "packages",
+      "key": "󰆧 "
+    },
+    {
+      "type": "memory",
+      "format": "{/1}{-}{/}{/2}{-}{/}{} / {}",
+      "key": " "
+    }
+  ]
+}

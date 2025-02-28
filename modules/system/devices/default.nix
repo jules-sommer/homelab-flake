@@ -1,0 +1,8 @@
+{ ... }:
+{
+  imports = [
+    ./boot
+    ./disks
+    ./networking
+  ];
+}
