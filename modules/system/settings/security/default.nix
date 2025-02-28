@@ -1,8 +1,0 @@
-{ ... }:
-{
-  imports = [
-    ./apparmor
-    ./polkit
-    ./privilege
-  ];
-}

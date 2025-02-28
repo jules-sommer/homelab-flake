@@ -1,0 +1,26 @@
+{ config, ... }:
+{
+  environment.persistence."/persist" = {
+    hideMounts = true;
+    users.jimbo = {
+      directories = [
+        "Keepers"
+        "Documents"
+        "Pictures"
+        "Videos"
+        "Games"
+        "VMs"
+
+        ".snapshots"
+        ".cache/nix-index"
+
+        { directory = ".ssh"; mode = "0700"; }
+        { directory = ".gnupg"; mode = "0700"; }
+      ];
+      files = [
+        ".zsh_history"
+        ".local/state/lazygit/state.yml"
+      ];
+    };
+  };
+}
