@@ -1,7 +1,7 @@
 { ... }:
 {
   imports = [
-    ./minimal
+    ./modules
     ./nix
     ./timezone
   ];
