@@ -1,10 +1,8 @@
-{ pkgs, config, ... }:
+{ config, ... }:
 {
   programs.ranger = {
     enable = true;
     settings = {
-      preview_images = true;
-      preview_images_method = "sixel";
       dirname_in_tabs = true;
       autosave_bookmarks = false;
       show_hidden = true;
@@ -88,9 +86,7 @@
         };
       }
     ];
-    extraConfig = ''
-      default_linemode devicons2
-    '';
+    extraConfig = "default_linemode devicons2";
   };
 
   # Ranger's bookmarks and necessary tools
@@ -106,17 +102,7 @@
         l:/home/${config.home.username}/.local
         d:/mnt
         n:/etc/nixos
-
-        # Remote files
-        J:/home/${config.home.username}/KittyNFS
-        K:/home/${config.home.username}/KittyNFS/Files
-        V:/home/${config.home.username}/KittyNFS/Media
-        M:/home/${config.home.username}/KittyNFS/Music
       '';
     };
-    packages = with pkgs; [
-      imagemagick
-      poppler_utils
-    ];
   };
 }
