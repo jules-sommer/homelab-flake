@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 {
   imports = [
     ./cfdyndns
@@ -10,4 +10,8 @@
     ./vaultwarden
     ./webserver
   ];
+
+  options.system = with lib; {
+    server.enable = mkEnableOption "Enable server apps and services";
+  };
 }

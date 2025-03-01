@@ -3,22 +3,19 @@
   imports = [
     ./accounts
     ./devices
+    ./modules
+    ./nix
     ./programs
     ./secrets
     ./services
-    ./settings
   ];
 
-  options.system = with lib; {
-    server.enable = mkEnableOption "Enable server apps and services";
+  networking = {
+    hostName = "rubble";
+    hostId = "e0b1fcef";
   };
 
-  config = {
-    networking = {
-      hostName = "rubble";
-      hostId = "e0b1fcef";
-    };
-    system.stateVersion = "24.11";
-    nixpkgs.hostPlatform = lib.mkDefault "aarch64-linux";
-  };
+  time.timeZone = "America/Toronto";
+  system.stateVersion = "24.11";
+  nixpkgs.hostPlatform = lib.mkDefault "aarch64-linux";
 }
