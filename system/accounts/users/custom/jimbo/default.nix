@@ -1,4 +1,4 @@
-{ config, pkgs, jimhome, ... }:
+{ config, pkgs, ... }:
 {
   users.users.jimbo = {
     hashedPassword = config.secrets.jimboAccPass;
@@ -23,6 +23,4 @@
     uid = 1000;
     shell = pkgs.zsh;
   };
-
-  home-manager.users.jimbo = import ../../../../../home/jimbo;
 }

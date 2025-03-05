@@ -11,10 +11,6 @@
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    jimhome = {
-      url = "git+https://git.nixfox.ca/Jimbo/nixos-config";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {

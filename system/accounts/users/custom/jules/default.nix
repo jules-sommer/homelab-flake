@@ -22,6 +22,4 @@
     uid = 1001;
     shell = pkgs.fish;
   };
-
-  #home-manager.users.jules = import ../../../../../home/jules;
 }
