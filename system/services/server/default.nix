@@ -2,16 +2,16 @@
 {
   imports = [
     ./cfdyndns
-    ./fileserver
     ./forgejo
+    ./jellyfin
     ./mysql
+    ./nextcloud
+    ./nfs
     ./owncast
     ./transmission
     ./vaultwarden
     ./webserver
   ];
 
-  options.system = with lib; {
-    server.enable = mkEnableOption "Enable server apps and services";
-  };
+  options.system.server.enable = with lib; mkEnableOption "Enable server apps and services";
 }

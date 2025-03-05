@@ -2,7 +2,6 @@
 {
   boot.supportedFilesystems = {
     btrfs = true;
-    ntfs = true;
     zfs = true;
   };
 

@@ -1,3 +1,3 @@
 # ROCKPro64-Server
 
-Jules' and Jimbo's flake for a ROCKPro64 server.
+A flake for Jules' ROCKPro64 server.

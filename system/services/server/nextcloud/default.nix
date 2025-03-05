@@ -2,7 +2,7 @@
 {
   imports = [ ./nginx ];
 
-  config = lib.mkIf config.system.fileserver.enable {
+  config = lib.mkIf config.system.server.enable {
     services.nextcloud = {
       enable = true;
       package = pkgs.nextcloud30;
