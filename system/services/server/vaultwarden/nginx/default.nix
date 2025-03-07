@@ -1,6 +1,6 @@
 { config, lib, ... }:
 {
-  services.nginx.virtualHosts."pass.nixfox.ca" = lib.mkIf config.services.vaultwarden.enable {
+  services.nginx.virtualHosts."pass.example.com" = lib.mkIf config.services.vaultwarden.enable {
     enableACME = true;
     forceSSL = true;
     locations."/" = {

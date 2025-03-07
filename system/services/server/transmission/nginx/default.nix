@@ -1,6 +1,6 @@
 { config, lib, ... }:
 {
-  services.nginx.virtualHosts."tor.nixfox.ca" = lib.mkIf config.services.transmission.enable {
+  services.nginx.virtualHosts."tor.example.com" = lib.mkIf config.services.transmission.enable {
     enableACME = true;
     forceSSL = true;
     locations."/" = {

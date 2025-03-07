@@ -1,13 +1,11 @@
-{ config, lib, pkgs, ... }:
+{ config, pkgs, ... }:
 {
   imports = [ ./nginx ];
 
-  config = lib.mkIf config.system.server.enable {
-    services.transmission = {
-      enable = true;
-      credentialsFile = pkgs.writeText "credentials" config.secrets.transmissionCredFile;
-      openPeerPorts = true;
-      settings.rpc-authentication-required = true;
-    };
+  services.transmission = {
+    enable = config.system.server.enable;
+    credentialsFile = pkgs.writeText "credentials" config.secrets.transmissionCredFile;
+    openPeerPorts = true;
+    settings.rpc-authentication-required = true;
   };
 }

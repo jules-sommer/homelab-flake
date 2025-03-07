@@ -1,7 +1,7 @@
-{ config, lib, pkgs, ... }:
+{ config, pkgs, ... }:
 {
-  services.mysql = lib.mkIf config.system.server.enable {
-    enable = true;
+  services.mysql = {
+    enable = config.system.server.enable;
     package = pkgs.mariadb;
     ensureDatabases = [
       "minecraft"

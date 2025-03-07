@@ -1,6 +1,6 @@
-{ config, lib, ... }:
+{ ... }:
 {
-  services.snapper.configs.jimbo = lib.mkIf config.environment.persistence."/persist".enable {
+  services.snapper.configs.jimbo = {
     SUBVOLUME = "/persist/home/jimbo";
     TIMELINE_CREATE = true;
     TIMELINE_CLEANUP = true;

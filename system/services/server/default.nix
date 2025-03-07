@@ -7,10 +7,10 @@
     ./mysql
     ./nextcloud
     ./nfs
+    ./nginx
     ./owncast
     ./transmission
     ./vaultwarden
-    ./webserver
   ];
 
   options.system.server.enable = with lib; mkEnableOption "Enable server apps and services";

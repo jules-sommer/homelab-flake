@@ -1,6 +1,6 @@
 { config, lib, ... }:
 {
-  services.nginx.virtualHosts."live.nixfox.ca" = lib.mkIf config.services.owncast.enable {
+  services.nginx.virtualHosts."live.example.com" = lib.mkIf config.services.owncast.enable {
     enableACME = true;
     forceSSL = true;
     locations."/" = {

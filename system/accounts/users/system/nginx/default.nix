@@ -3,10 +3,7 @@
   users = {
     users.nginx = {
       group = "nginx";
-      extraGroups = [
-        "turnserver"
-        "virtualMail"
-      ];
+      extraGroups = [ "virtualMail" ];
       isSystemUser = true;
       uid = 60;
     };

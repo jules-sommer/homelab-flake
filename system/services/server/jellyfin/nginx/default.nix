@@ -1,6 +1,6 @@
 { config, lib, ... }:
 {
-  services.nginx.virtualHosts."jelly.nixfox.ca" = lib.mkIf config.services.forgejo.enable {
+  services.nginx.virtualHosts."jelly.example.com" = lib.mkIf config.services.forgejo.enable {
     enableACME = true;
     forceSSL = true;
     locations."/" = {

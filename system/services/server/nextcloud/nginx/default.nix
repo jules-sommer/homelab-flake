@@ -1,6 +1,6 @@
 { config, lib, ... }:
 {
-  services.nginx.virtualHosts."cloud.nixfox.ca" = lib.mkIf config.services.nextcloud.enable {
+  services.nginx.virtualHosts."cloud.example.com" = lib.mkIf config.services.nextcloud.enable {
     enableACME = true;
     addSSL = true;
     locations."/" = {

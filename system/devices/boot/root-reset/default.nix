@@ -1,7 +1,6 @@
 { config, ... }:
 {
   boot.initrd.systemd.services.root-reset = {
-    enable = true;
     description = "Create new and snapshot previous root";
     wantedBy = [ "initrd.target" ];
     before = [ "sysroot.mount" ];

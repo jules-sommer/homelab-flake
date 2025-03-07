@@ -1,6 +1,6 @@
-{ config, lib, ... }:
+{ ... }:
 {
-  services.snapper.configs.jules = lib.mkIf config.environment.persistence."/persist".enable {
+  services.snapper.configs.jules = {
     SUBVOLUME = "/persist/home/jules";
     TIMELINE_CREATE = true;
     TIMELINE_CLEANUP = true;
