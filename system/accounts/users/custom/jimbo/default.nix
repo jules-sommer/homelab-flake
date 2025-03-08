@@ -14,9 +14,6 @@
       "input"
       "disk"
       "dialout"
-      "kvm"
-      "libvirtd"
-      "qemu-libvirtd"
       "nginx"
       "nfsShare"
     ];

@@ -71,9 +71,6 @@
 
                 "/persist/home/jules" = { };
                 "/persist/home/jules/.snapshots" = { };
-
-                "/persist/home/jimbo" = { };
-                "/persist/home/jimbo/.snapshots" = { };
               };
             };
           };
