@@ -2,6 +2,6 @@
 {
   imports = [
     ./jules
-    ./jimbo
+    ./bun
   ];
 }

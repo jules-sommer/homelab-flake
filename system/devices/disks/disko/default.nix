@@ -21,17 +21,11 @@
                 mountOptions = [ "umask=0077" ];
               };
             };
-            luks = {
+            main = {
               size = "100%";
               content = {
-                type = "luks";
-                name = "${config.networking.hostName}-disk";
-                settings.allowDiscards = true;
-                passwordFile = "/tmp/secret.key";
-                content = {
-                  type = "lvm_pv";
-                  vg = "${config.networking.hostName}";
-                };
+                type = "lvm_pv";
+                vg = "${config.networking.hostName}";
               };
             };
           };
@@ -68,14 +62,13 @@
                   mountOptions = [ "compress=zstd" "noatime" "ssd" ];
                 };
                 "/persist/.snapshots" = { };
-
                 "/persist/home/jules" = { };
                 "/persist/home/jules/.snapshots" = { };
               };
             };
           };
           swap = {
-            size = "4G";
+            size = "2G";
             content = {
               type = "swap";
               discardPolicy = "both";

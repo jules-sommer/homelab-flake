@@ -18,7 +18,7 @@
     ...
   }@inputs:
   {
-    nixosConfigurations.rubble = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.progesterone = nixpkgs.lib.nixosSystem {
       modules = [ ./system ];
       specialArgs = inputs;
     };

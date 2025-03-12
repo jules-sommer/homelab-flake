@@ -11,7 +11,7 @@
   ];
 
   networking = {
-    hostName = "rubble";
+    hostName = "progesterone";
     hostId = "e0b1fcef";
   };
 
