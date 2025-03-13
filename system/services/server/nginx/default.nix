@@ -1,9 +1,9 @@
-{ config, lib, ... }:
+{ ... }:
 {
   imports = [ ./virtualhosts ];
 
   services.nginx = {
-    enable = config.system.server.enable;
+    enable = true;
     recommendedTlsSettings = true;
     recommendedOptimisation = true;
     recommendedGzipSettings = true;

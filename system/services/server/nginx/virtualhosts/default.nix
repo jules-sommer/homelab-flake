@@ -1,6 +1,6 @@
 { ... }:
 {
   imports = [
-    ./example
+    ./dodrugsbe.gay
   ];
 }

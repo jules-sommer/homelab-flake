@@ -7,6 +7,6 @@
       isSystemUser = true;
       uid = 60;
     };
-    groups.nginx = {};
+    groups.nginx = { };
   };
 }
