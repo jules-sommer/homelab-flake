@@ -13,5 +13,6 @@
     ./vaultwarden
   ];
 
+  options.progesterone.vaultwarden.enable = with lib; mkEnableOption "Enable vaultwarden";
   options.system.server.enable = with lib; mkEnableOption "Enable server apps and services";
 }

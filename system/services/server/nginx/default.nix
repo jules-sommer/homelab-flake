@@ -1,6 +1,9 @@
 { ... }:
 {
-  imports = [ ./virtualhosts ];
+  imports = [
+    ./virtualhosts
+    ./acme
+  ];
 
   services.nginx = {
     enable = true;
